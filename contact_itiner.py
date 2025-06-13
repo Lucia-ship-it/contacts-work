@@ -1,13 +1,20 @@
-#def hlavni_menu():
-    # vypsala
-    # 1.zobrazit kontakty
-    # 2. pridat kontakt
-    # 3. ukoncit
+#hlavni_menu():
+    # fce vypsala
+        # 1.zobrazit kontakty
+        # 2. pridat kontakt
+        # 3. ukoncit
 
     #nacitat vstup od uzivatela (input)
 
     #vytisknut
 
+def hlavni_menu():
+    print("Váš zoznam kontaktov".upper())   
+    print("1. Zobraziť kontakty")
+    print("2. Pridať kontakt")
+    print("3. Ukončiť")
+
+
 contacts = [
     {
         "name": "Anička",
@@ -21,49 +28,20 @@ contacts = [
     }
 ]
 
-print("Váš zoznam kontaktov".upper())   
+#vstup od uzivatela - novy kontakt
+meno = input("zadajte svoje meno: ")
+email = input ("vypln emailovu adresu: ")
+phone = input ("zadaj svoje telefonne cislo: ")
 
-print("1. zobrazit kontakty")
-print("2. pridat kontakt")
-print("3. ukoncit")
+new_contact = {
+    "name": meno,
+    "email": email,
+    "phone": phone
+}
+
+print(new_contact)
+
+print("\n\n")
+contacts.append(new_contact)
 
 print(contacts)
-
-meno = input("zadajte svoje meno: ")
-telefon = input ("zadaj svoje telefonne cislo: ")
-email = input ("vypln emailovu adresu: ")
-
-novy_uzivatel = meno, telefon, email
-
-#print(novy_uzivatel)
-
-contacts = [
-    {
-        "name": "Anička",
-        "email": "anicka@email.com",
-        "phone": "777 777 777"
-    },
-    {
-        "name": "Nikol",
-        "email": "nikol@email.com",
-        "phone": "777 777 777"
-    }
-]
-
-def hlavni_menu():
-    # vypsala:
-    # 1. zobrazit kontakty
-    # 2. přidat kontakt
-    # 3. ukončit
-    print("1. zobrazit kontakty")
-    print("2. přidat kontakt")
-    print("3. ukončit")
-
-    # načte vstup od uživatele (input)
-    user_entry = input()
-    # vytiskne
-    print(user_entry)
-    
-    # celou implementaci commitnout
-
-hlavni_menu()
